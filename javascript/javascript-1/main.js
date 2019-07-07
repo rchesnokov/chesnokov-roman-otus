@@ -1,25 +1,25 @@
-const utils = require('./utils');
+const utils = require('./utils')
 
 const sum = (...args) => {
-  let numbers = [...args];
+  let numbers = [...args]
 
-  utils.checkArgsLength(args);
-  utils.checkArgsType(args);
+  utils.checkArgsLength(args)
+  utils.checkArgsType(args)
 
   const sumf = (...args) => {
-    utils.checkArgsType(args);
+    utils.checkArgsType(args)
 
     if (args.length) {
-      numbers = [...numbers, ...args];
-      return sumf;
+      numbers = [...numbers, ...args]
+      return sumf
     }
 
-    return numbers.reduce((acc, curr) => acc + curr);
-  };
+    return numbers.reduce((acc, curr) => acc + curr)
+  }
 
-  return sumf;
-};
+  return sumf
+}
 
-const s = sum(1)(2)(3)();
+const s = sum(1)(2)(3)()
 
-console.log(s);
+console.log(s)
